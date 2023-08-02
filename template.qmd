@@ -1,0 +1,110 @@
+---
+title: "A Template for Academic Articles"
+format:
+  aca-latex-pdf: default
+author: 
+  - name: "Andrés Castro Araújo"
+    affiliation: "Duke University"
+    email: andres.castro.araujo@duke.edu
+    attributes:
+      corresponding: true
+  - name: "Sèrdna Ortsac Ojùara"
+    affiliation: "Ekud University"
+    email: serdna.ortsac.ojuara@ekud.edu
+thanks: |
+  Thanks to all our friends.
+abstract: |
+  This document is a template demonstrating a format created by Andrés. Abstracts tend to be much longer by a lot. This is one last sentence.
+keywords: 
+  - latex
+  - template
+  - quarto
+epigraph:
+  - text: "My apologies to the accidental for calling it necessary. However, apologies to necessity if I happen to be wrong."
+    source: "Wislawa Szymborska"
+  - text: "One thing is sure, for sociology to accept that no functionalist arguments work is like cutting off one’s nose to spite one’s face."
+    source: "Mary Douglas"
+date: last-modified
+bibliography: references.bib
+#keep-tex: true
+---
+
+## Introduction
+
+Constitutional decision-making deals with very general rules (e.g., laws, principles) that can be described as "thick" in their formulation---i.e., they come "enriched with copious advice on how to apply them: examples, exceptions, problems, provisos, models, caveats, and... discretion" [@daston2022, pp. 56]. These rulings are also characterized by *analogical reasoning---*i.e., judges must discern significant differences and similarities among particular cases such that each citation represents a plausible analogy; "not every past case of manslaughter can be plausibly presented as a precedent for the one at hand, and not every detail of even a convincing precedent will match up with the present case" [@daston2022, pp. 8]. The more a case gets cited, the more it gets established as a binding precedent---i.e., the more *rule-like* it becomes.
+
+In this study I will argue that the general framework of *rule ecologies* [@march2000] can be applied fruitfully to the realm of constitutional decision-making (or *rulings)*. This framework builds upon three general ideas: (1) *rules evolve over time in response to problems;* (2) *rules are interrelated within an organization;* and (3) *rules both record history and reflect learning within the organization.*
+
+## Hypotheses
+
+$H_1:$ *Negative density dependence.*
+
+The "birthrate" of new constitutional decisions *decreases* as a function of the total number of decisions occupying the same space. If constitutional decisions can be described as solving "problems," then we can expect that newer cases involving similar problems will not reach the highest levels of the judicial hierarchy but rather get settled in lower courts. This is an outcome of the establishment of precedent.
+
+$H_2:$ *Imprinting.*
+
+Some problems are marked by particular historical periods, in which bursts of new decisions will occur. "Problems frequently originate from outside the organization; and when they do, they frequently come in surges of concerns that mark a particular historical period. As a result, clusters of rules share a common beginning." [@march2000, pp. 57]. This should happen, for example, as a result of economic recessions, a global pandemic, a peace process, and so on.
+
+### Density Dependence
+
+@fig-density was made with `ggplot2`. This package was created some years ago by Hadley Wickham [-@wickham2016].
+
+```{r}
+#| echo: false
+#| label: fig-density
+#| fig-cap: "The density dependence hypothesis typical organizational ecology [e.g., @hannan1977]"
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 3
+library(ggplot2)
+extrafont::loadfonts(quiet = TRUE)
+
+ggplot() +
+  xlim(-5, 5) +
+  geom_function(fun = \(x) -x^2) +
+  labs(y = "Birthrate", x = "Density") + 
+  ## HOW DO I GET "AVENIR NEXT CONDENSED" TO KNIT TO PDF???
+  theme_classic(base_family = "Crimson Pro") +
+  theme(
+    axis.ticks = element_blank(), 
+    axis.text = element_blank(), 
+    text = element_text(size = 8)
+)
+```
+
+## Math
+
+@eq-1 depicts the *fundamental theorem of calculus.*
+
+$$
+f(b) - f(a) = \int_a^b f^\prime (x) dx
+$$ {#eq-1}
+
+@eq-2 is an ERGM.
+
+$$
+\Pr(\mathbf Y = y)  = \frac{\exp \Big( 
+\boldsymbol \theta^\top \boldsymbol z(y) \Big)}{\kappa (\boldsymbol \theta)} 
+$$ {#eq-2}
+
+The denominator $\kappa$ represents the summation of the numerator summed over all possible networks of with the same node set $(\mathcal N)$. This normalizing constant can be expressed as follows:
+
+$$
+\kappa(\boldsymbol \theta) = \sum_{y \in \mathcal N} \exp \Big(\boldsymbol \theta^\top \boldsymbol z(y) \Big)
+$$
+
+Finally, @eq-3 shows how we can use Bayes' rule to describe the joint distribution of $\theta$ and $y$ as a product two other distributions: the **prior distribution** $p(\theta)$ and (2) the **sampling distribution** (or *data distribution)* $p(y \mid \theta)$.
+
+$$
+\underbrace{p(\theta \mid y)}_\text{posterior density} = \frac{p(\theta, y)}{p(y)} = \frac{p(\theta)\ p(y\mid \theta)}{ \int_\Theta p(\theta)\ p(y \mid \theta)d\theta}$$ {#eq-3}
+
+## Code
+
+This is how code looks like. It doesn't look great. I will try to make this better in the future.
+
+```{r}
+rnorm(10) |> 
+  round(2)
+```
+
+## References
