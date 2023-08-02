@@ -22,8 +22,8 @@ keywords:
 epigraph:
   - text: "My apologies to the accidental for calling it necessary. However, apologies to necessity if I happen to be wrong."
     source: "Wislawa Szymborska"
-  - text: "One thing is sure, for sociology to accept that no functionalist arguments work is like cutting off one’s nose to spite one’s face."
-    source: "Mary Douglas"
+  - text: "Early impressions tend to coalesce into a natural view of the world. All later experiences then tend to receive their meaning from this original set, whether they appear as that set’s verification and fulfillment or as its negation and antithesis."
+    source: "Karl Mannheim"
 date: last-modified
 bibliography: references.bib
 #keep-tex: true
