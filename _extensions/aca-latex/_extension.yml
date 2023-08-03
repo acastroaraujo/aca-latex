@@ -13,7 +13,7 @@ contributes:
       
       # template pieces
       include-in-header: 
-        - "header.tex"
+        - "include-in-header.tex"
         
       template-partials:
         - "title.tex"
@@ -21,9 +21,12 @@ contributes:
       
       # document styling
       mainfont: "Optima"
-      number-sections: false
-      # linestretch: 1.33
-
+      monofont: "Fira Code"
+      code-block-border-left: "#F5F3ED"
+      code-block-bg: "#F5F3ED"
+      
+      date-format: "MMMM D, YYYY"
+      
       # citations and links
       colorlinks: true
       link-citations: true

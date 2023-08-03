@@ -1,7 +1,8 @@
 
 % Abstract
 \usepackage[overload]{textcase}
-\usepackage[runin]{abstract} % ELIMINATING THIS LINE MAKES THE ERROR GO AWAY
+\usepackage{abstract} 
+\abstractrunin
 \renewcommand{\abstractnamefont}{\sffamily\footnotesize\bfseries\MakeUppercase}
 \renewcommand{\abstracttextfont}{\small}
 \setlength{\absleftindent}{\parindent * 2}
@@ -11,3 +12,7 @@
 % Keywords
 \newenvironment{keywords}
 {\hspace{\parindent}\small\sffamily{\sffamily\footnotesize\bfseries\MakeUppercase{Keywords}}\quad}
+
+% Extra
+\OnehalfSpacing
+\setsecnumdepth{paragraph}
