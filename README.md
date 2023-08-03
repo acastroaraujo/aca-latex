@@ -1,7 +1,7 @@
 # aca-latex format
 
 ```bash
-quarto install template acastroaraujo/aca-latex
+quarto install extension acastroaraujo/aca-latex
 ```
 
 ```bash
