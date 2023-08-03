@@ -57,7 +57,7 @@ Some problems are marked by particular historical periods, in which bursts of ne
 ```{r}
 #| echo: false
 #| label: fig-density
-#| fig-cap: "The density dependence hypothesis typical organizational ecology [e.g., @hannan1977]."
+#| fig-cap: "The density dependence hypothesis."
 #| fig-align: center
 #| fig-height: 2
 #| fig-width: 3
@@ -105,11 +105,11 @@ $$
 
 # Code
 
-This is how code looks like. It doesn't look great. I will try to make this better in the future.
+This is how code looks like. It has ligatures so that's why the pipe operator looks like a triangle.
 
 ```{r}
-rnorm(10) |> 
-  round(2)
+x <- rnorm(20) |> round(2)
+str(x)
 ```
 
 # References
